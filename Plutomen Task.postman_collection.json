@@ -1,0 +1,608 @@
+{
+	"info": {
+		"_postman_id": "aadfd62b-b22b-4ed2-ba02-40613fdeee6b",
+		"name": "Plutomen Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28172083"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"abc\",\r\n    \"email\":\"abcde@gmail.com\",\r\n    \"password\":\"12345\",\r\n    \"role\":\"Sales\",\r\n    \"department\":\"Marketing\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"abc\",\r\n    \"email\":\"abc@gmail.com\",\r\n    \"password\":\"12345\",\r\n    \"role\":\"Client Communication\",\r\n    \"department\":\"Development\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "249"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f9-/8FHaTcBjrXpQOANyvHteuA4rhc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 25 Jun 2023 06:04:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"abc\",\n    \"email\": \"abc@gmail.com\",\n    \"password\": \"$2b$10$ECtTcMy7Jw3RRTKjkPXJ6.RfVp0zQ0JG1iiPv2kFbxUdZSsODF6ay\",\n    \"role\": \"Client Communication\",\n    \"department\": \"Development\",\n    \"_id\": \"6497d8f3ceddc3163b63abd6\",\n    \"createdAt\": \"2023-06-25T06:04:35.713Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"abc@gmail.com\",\r\n    \"password\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"abc@gmail.com\",\r\n    \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "130"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"82-OXGJO1gHG+RdY5DO0CcLlvX2C4w\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 25 Jun 2023 06:05:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Logged in Successfully\",\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.YWJjQGdtYWlsLmNvbQ.WiyEKOnXEI6fkU-Za2W4UnMOiHQgGezIn0qV6oslyFg\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Contact List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.YWJjQGdtYWlsLmNvbQ.WiyEKOnXEI6fkU-Za2W4UnMOiHQgGezIn0qV6oslyFg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/user/contact-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"contact-list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Contact List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/contact-list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"contact-list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "595"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"253-K/j4rUpUn33ubYAhoiBkEZSXyrM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 25 Jun 2023 06:06:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6497d8f3ceddc3163b63abd6\",\n        \"name\": \"abc\",\n        \"email\": \"abc@gmail.com\",\n        \"password\": \"$2b$10$ECtTcMy7Jw3RRTKjkPXJ6.RfVp0zQ0JG1iiPv2kFbxUdZSsODF6ay\",\n        \"role\": \"Client Communication\",\n        \"department\": \"Development\",\n        \"createdAt\": \"2023-06-25T06:04:35.713Z\",\n        \"__v\": 0,\n        \"token\": \"eyJhbGciOiJIUzI1NiJ9.YWJjQGdtYWlsLmNvbQ.WiyEKOnXEI6fkU-Za2W4UnMOiHQgGezIn0qV6oslyFg\"\n    },\n    {\n        \"_id\": \"6497d949ceddc3163b63abdc\",\n        \"name\": \"xyz\",\n        \"email\": \"xyz@gmail.com\",\n        \"password\": \"$2b$10$EoQaaDHJVGaQ70IkP9EG4uH1r0QYr9dWiIGmP0/XmrMjMLosJ79P6\",\n        \"role\": \"Client Communication\",\n        \"department\": \"Development\",\n        \"createdAt\": \"2023-06-25T06:06:01.117Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Search Contact",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/contacts?name=abc&email=abcde@gmail.com&role=Sales",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "abc"
+						},
+						{
+							"key": "email",
+							"value": "abcde@gmail.com"
+						},
+						{
+							"key": "role",
+							"value": "Sales"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "name",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/contacts?name=abc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"contacts"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "abc"
+								},
+								{
+									"key": "email",
+									"value": "abc@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "role",
+									"value": "Client Communication",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "580"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"244-vjitSpkx1F4/FfWXwd+rsgVfj1w\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 25 Jun 2023 06:09:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6497d8f3ceddc3163b63abd6\",\n        \"name\": \"abc\",\n        \"email\": \"abc@gmail.com\",\n        \"password\": \"$2b$10$ECtTcMy7Jw3RRTKjkPXJ6.RfVp0zQ0JG1iiPv2kFbxUdZSsODF6ay\",\n        \"role\": \"Client Communication\",\n        \"department\": \"Development\",\n        \"createdAt\": \"2023-06-25T06:04:35.713Z\",\n        \"__v\": 0,\n        \"token\": \"eyJhbGciOiJIUzI1NiJ9.YWJjQGdtYWlsLmNvbQ.WiyEKOnXEI6fkU-Za2W4UnMOiHQgGezIn0qV6oslyFg\"\n    },\n    {\n        \"_id\": \"6497da22ceddc3163b63abeb\",\n        \"name\": \"abc\",\n        \"email\": \"abcde@gmail.com\",\n        \"password\": \"$2b$10$hQp.Z2tCZF2OJ1VOU62/DufR50VdvCfHLl0JwOmLu1nKDH65guDqy\",\n        \"role\": \"Sales\",\n        \"department\": \"Marketing\",\n        \"createdAt\": \"2023-06-25T06:09:38.222Z\",\n        \"__v\": 0\n    }\n]"
+				},
+				{
+					"name": "email",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/contacts?email=abc@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"contacts"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "abc",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "abc@gmail.com"
+								},
+								{
+									"key": "role",
+									"value": "Client Communication",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "345"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"159-mi9R1AAT5JFNTGLgvPEdV6oBLtc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 25 Jun 2023 06:08:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6497d8f3ceddc3163b63abd6\",\n        \"name\": \"abc\",\n        \"email\": \"abc@gmail.com\",\n        \"password\": \"$2b$10$ECtTcMy7Jw3RRTKjkPXJ6.RfVp0zQ0JG1iiPv2kFbxUdZSsODF6ay\",\n        \"role\": \"Client Communication\",\n        \"department\": \"Development\",\n        \"createdAt\": \"2023-06-25T06:04:35.713Z\",\n        \"__v\": 0,\n        \"token\": \"eyJhbGciOiJIUzI1NiJ9.YWJjQGdtYWlsLmNvbQ.WiyEKOnXEI6fkU-Za2W4UnMOiHQgGezIn0qV6oslyFg\"\n    }\n]"
+				},
+				{
+					"name": "role",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/contacts?role=Client Communication",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"contacts"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "abc",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "abc@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "role",
+									"value": "Client Communication"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "595"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"253-K/j4rUpUn33ubYAhoiBkEZSXyrM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 25 Jun 2023 06:08:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6497d8f3ceddc3163b63abd6\",\n        \"name\": \"abc\",\n        \"email\": \"abc@gmail.com\",\n        \"password\": \"$2b$10$ECtTcMy7Jw3RRTKjkPXJ6.RfVp0zQ0JG1iiPv2kFbxUdZSsODF6ay\",\n        \"role\": \"Client Communication\",\n        \"department\": \"Development\",\n        \"createdAt\": \"2023-06-25T06:04:35.713Z\",\n        \"__v\": 0,\n        \"token\": \"eyJhbGciOiJIUzI1NiJ9.YWJjQGdtYWlsLmNvbQ.WiyEKOnXEI6fkU-Za2W4UnMOiHQgGezIn0qV6oslyFg\"\n    },\n    {\n        \"_id\": \"6497d949ceddc3163b63abdc\",\n        \"name\": \"xyz\",\n        \"email\": \"xyz@gmail.com\",\n        \"password\": \"$2b$10$EoQaaDHJVGaQ70IkP9EG4uH1r0QYr9dWiIGmP0/XmrMjMLosJ79P6\",\n        \"role\": \"Client Communication\",\n        \"department\": \"Development\",\n        \"createdAt\": \"2023-06-25T06:06:01.117Z\",\n        \"__v\": 0\n    }\n]"
+				},
+				{
+					"name": "all",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/contacts?name=abc&email=abcde@gmail.com&role=Sales",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"contacts"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "abc"
+								},
+								{
+									"key": "email",
+									"value": "abcde@gmail.com"
+								},
+								{
+									"key": "role",
+									"value": "Sales"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "236"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ec-ZLVBmKu9EN5Kkl566Q0dllIdW8U\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 25 Jun 2023 06:10:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6497da22ceddc3163b63abeb\",\n        \"name\": \"abc\",\n        \"email\": \"abcde@gmail.com\",\n        \"password\": \"$2b$10$hQp.Z2tCZF2OJ1VOU62/DufR50VdvCfHLl0JwOmLu1nKDH65guDqy\",\n        \"role\": \"Sales\",\n        \"department\": \"Marketing\",\n        \"createdAt\": \"2023-06-25T06:09:38.222Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		}
+	]
+}
